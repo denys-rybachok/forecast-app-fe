@@ -3,13 +3,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-fixel: "Funnel Display", sans-serif;
+  --color-primary: #071429;
+  --color-secondary: #07142980;
+  --color-main-blue: #0e64ee;
+  --color-light-grey: #f3f6fc;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-main-blue: var(--color-main-blue);
+  --color-light-grey: var(--color-light-grey);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-open-sans: var(--font-open-sans);
+  --font-fixel: var(--font-fixel);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +33,6 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-primary);
+  font-family: Open Sans, Helvetica, sans-serif;
 }

@@ -4,7 +4,7 @@ import LogOutButton from "../buttons/LogOutButton";
 
 const Sidebar = () => {
   return (
-    <aside className="h-screen w-[70px] bg-[#e7edf8] flex flex-col items-center py-4">
+    <aside className="h-screen w-[70px] flex flex-col items-center py-3">
       <Logo />
       <NavBar />
       <LogOutButton />

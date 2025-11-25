@@ -1,7 +1,40 @@
+"use client";
+
+import { useState } from "react";
 import IconButton from "./IconButton";
+import Image from "next/image";
+import InputBase from "@mui/material/InputBase";
 
 const SearchButton = () => {
-  return <IconButton src={"/icons/search.png"} alt={"Search icon"} />;
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="flex items-center gap-2">
+      {/* Search icon button */}
+      <IconButton
+        src="/icons/search.png"
+        alt="Search icon"
+        onClick={() => setOpen((prev) => !prev)}
+      />
+
+      {/* Input appears on click */}
+      {open && (
+        <InputBase
+          autoFocus
+          placeholder="Search..."
+          sx={{
+            border: "1px solid #ccc",
+            borderRadius: "20px",
+            padding: "4px 12px",
+            width: "180px",
+            height: "36px",
+            transition: "0.2s",
+            fontSize: "14px",
+          }}
+        />
+      )}
+    </div>
+  );
 };
 
 export default SearchButton;
