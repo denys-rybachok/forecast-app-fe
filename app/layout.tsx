@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Funnel_Display } from "next/font/google";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/Header";
