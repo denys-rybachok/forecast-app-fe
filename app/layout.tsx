@@ -30,9 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased ${fixel.variable} ${openSans.variable}`}>
-        <div className="flex bg-[#e7edf8] gap-3 pr-4">
+        <div className="flex bg-main-grey gap-3 pr-4">
           <Sidebar />
-          <main className="flex flex-col flex-1">
+          <main className="flex flex-col flex-1 ml-18 mt-[74px]">
             <Header />
             <section className="flex-1">{children}</section>
           </main>
