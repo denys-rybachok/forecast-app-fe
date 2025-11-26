@@ -37,6 +37,7 @@ export const lineChartTooltip = ({ chart, tooltip }: LineTooltipContext) => {
   const label = chart.data.labels?.[index];
 
   const itemsHtml = chart.data.datasets
+    .filter((ds: any) => ds.showInTooltip !== false)
     .map((ds, i) => {
       const rawValue = ds.data[index];
       const color = (ds.borderColor as string) ?? "#000";

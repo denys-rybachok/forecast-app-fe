@@ -4,10 +4,12 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
+import localFont from "next/font/local";
 
-const fixel = Funnel_Display({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+export const fixelDisplay = localFont({
+  src: "../public/fonts/fixel-display-regular.woff2",
+  weight: "400",
+  style: "normal",
   variable: "--font-fixel",
 });
 
@@ -29,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${fixel.variable} ${openSans.variable}`}>
+      <body
+        className={`antialiased ${fixelDisplay.variable} ${openSans.variable}`}
+      >
         <div className="flex bg-main-grey gap-3 pr-4">
           <Sidebar />
           <main className="flex flex-col flex-1 ml-18 mt-[74px]">

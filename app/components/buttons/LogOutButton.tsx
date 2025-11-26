@@ -1,10 +1,12 @@
-import { LogOut } from "lucide-react";
+"use client";
+
+import IconButton from "./IconButton";
 
 const LogOutButton = () => {
   return (
-    <button className="mt-auto h-12 w-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
-      <LogOut size={20} className="text-white/60" />
-    </button>
+    <span className="mt-auto">
+      <IconButton src="/icons/log_out.png" alt="Log Out icon" />
+    </span>
   );
 };
 

@@ -28,7 +28,7 @@ const cards = [
 
 const ForecastingDetails = () => {
   return (
-    <div className="bg-light-grey rounded-xl py-[20px] px-[14px] max-w-[440px]">
+    <div className="bg-light-grey rounded-xl py-[20px] px-[14px]">
       <p className="font-fixel font-semibold text-[18px] mb-2">
         How Forecasting Works
       </p>

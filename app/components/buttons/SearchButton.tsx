@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import IconButton from "./IconButton";
-import Image from "next/image";
 import InputBase from "@mui/material/InputBase";
 
 const SearchButton = () => {
@@ -10,14 +9,11 @@ const SearchButton = () => {
 
   return (
     <div className="flex items-center gap-2">
-      {/* Search icon button */}
       <IconButton
         src="/icons/search.png"
         alt="Search icon"
         onClick={() => setOpen((prev) => !prev)}
       />
-
-      {/* Input appears on click */}
       {open && (
         <InputBase
           autoFocus

@@ -25,10 +25,19 @@ export const mockData = {
     },
     {
       label: "Weekly Demand",
-      data: [40, 65, 50, 55, 18, 36, 30, 28, 60, 38, 42, 45],
+      data: [40, 65, 50, 55, 22, 36, 30, 28, 60, 38, 42, 45],
       borderColor: colorsConfigurator.primaryBlue,
       fill: false,
       tension: 0.3,
+    },
+    {
+      label: "Safety Stock Level",
+      data: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20],
+      borderColor: colorsConfigurator.secondaryGreen,
+      borderDash: [5, 5],
+      fill: false,
+      tension: 0.3,
+      showInTooltip: false,
     },
   ],
 };

@@ -17,7 +17,7 @@ const NavIconButton = ({ icon, href }: NavIconButtonProps) => {
   return (
     <Link
       href={href}
-      className={`h-10 w-10 flex items-center justify-center rounded-full transition
+      className={`h-[46px] w-[46px] flex items-center justify-center rounded-full transition mb-1
         ${
           isActive
             ? "bg-white shadow-md text-blue-600"

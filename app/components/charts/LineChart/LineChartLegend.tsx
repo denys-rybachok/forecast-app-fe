@@ -11,7 +11,7 @@ interface LineChartLegendProps {
 }
 
 const LineChartLegend = ({ legend, chartRef }: LineChartLegendProps) => {
-  const [visible, setVisible] = useState([true, true]);
+  const [visible, setVisible] = useState(() => legend.map(() => true));
 
   const toggleDataset = (index: number) => {
     const chart = chartRef.current;

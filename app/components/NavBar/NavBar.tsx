@@ -1,18 +1,35 @@
-import { Home, Package2, MapPin, ShoppingCart, Shuffle } from "lucide-react";
+import {
+  Home,
+  Package,
+  MapPin,
+  ShoppingCart,
+  ArrowUpDown,
+  Receipt,
+} from "lucide-react";
 import NavIconButton from "../buttons/NavIconButton";
 import { routes } from "@/app/constants/routes";
 
 const NavBar = () => {
   return (
-    <nav className="flex flex-col gap-4 bg-[#0714290D] rounded-full py-4 px-2 items-center w-12">
-      <NavIconButton icon={<Home size={18} />} href="/home" />
+    <nav className="flex flex-col bg-[#0714290D] rounded-full p-[2px] items-center">
+      <NavIconButton icon={<Home size={20} />} href={`/${routes.home}`} />
       <NavIconButton
-        icon={<Package2 size={18} />}
+        icon={<Package size={20} />}
         href={`/${routes.products}`}
       />
-      <NavIconButton icon={<MapPin size={18} />} href="/locations" />
-      <NavIconButton icon={<ShoppingCart size={18} />} href="/cart" />
-      <NavIconButton icon={<Shuffle size={18} />} href="/flow" />
+      <NavIconButton
+        icon={<MapPin size={20} />}
+        href={`/${routes.locations}`}
+      />
+      <NavIconButton
+        icon={<ShoppingCart size={20} />}
+        href={`/${routes.cart}`}
+      />
+      <NavIconButton
+        icon={<ArrowUpDown size={20} />}
+        href={`/${routes.order}`}
+      />
+      <NavIconButton icon={<Receipt size={20} />} href={`/${routes.receipt}`} />
     </nav>
   );
 };
